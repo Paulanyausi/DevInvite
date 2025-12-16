@@ -1,0 +1,220 @@
+/* reset spacing and fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* main color dark mode */
+body {
+    --bg: #0d0d11;
+    --text: #f2f2f7;
+    --subtext: #bfbfc9;
+    --card-bg: #14141c;
+    --accent1: #7b61ff;
+    --accent2: #4dc3ff;
+
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* sidebar area */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, #101018, #0d0d11);
+    border-right: 1px solid rgba(255,255,255,0.08);
+    position: fixed;
+    padding: 30px 20px;
+}
+
+/* logo text */
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+/* sidebar nav links */
+.nav a {
+    display: block;
+    margin: 12px 0;
+    color: var(--subtext);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--accent1);
+}
+
+/* pushes main page away from sidebar */
+.page {
+    margin-left: 260px;
+    padding-bottom: 60px;
+}
+
+/* all page sections */
+section {
+    padding: 90px 60px;
+}
+
+/* hero section at the top */
+.hero {
+    padding-top: 120px;
+}
+
+/* gradient heading */
+.hero h1 {
+    font-size: 3.4rem;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* small paragraph text */
+.hero p {
+    max-width: 650px;
+    color: var(--subtext);
+    margin: 20px 0 30px;
+}
+
+/* invite button */
+.invite-btn {
+    padding: 14px 35px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.invite-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px var(--accent1);
+}
+
+/* glowing line under hero heading */
+.neon-line {
+    height: 3px;
+    width: 90px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    margin: 30px 0;
+    animation: glow 4s infinite linear;
+}
+
+/* glow animation */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px var(--accent2); }
+    50% { box-shadow: 0 0 20px var(--accent1); }
+    100% { box-shadow: 0 0 5px var(--accent2); }
+}
+
+/* section titles gradient text */
+.testimonials h2,
+.timeline h2,
+.checklist h2,
+.contact h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* testimonials grid layout */
+.testimonial-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* testimonial cards */
+.t-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.t-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(125,97,255,0.3);
+}
+
+.t-name {
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+/* timeline vertical line */
+.timeline-list {
+    margin-top: 40px;
+    border-left: 3px solid var(--accent1);
+    padding-left: 30px;
+}
+
+/* timeline item */
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* small circles on the timeline */
+.timeline-item::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: var(--accent1);
+    border-radius: 50%;
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    box-shadow: 0 0 10px var(--accent1);
+}
+
+.timeline-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+/* checklist styling */
+.checklist-items {
+    margin-top: 30px;
+}
+
+.check {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+/* contact section text */
+.contact p {
+    max-width: 600px;
+    color: var(--subtext);
+    margin-bottom: 25px;
+}
+
+/* contact email link */
+.contact a {
+    font-size: 1.1rem;
+    color: var(--accent1);
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 35px;
+    color: var(--subtext);
+    font-size: 0.9rem;
+}
